@@ -1,0 +1,28 @@
+.border{
+    border-style: ridge;
+    border-radius: 10px;
+    border-color: #2c8a72;
+}
+.center{
+    margin-top: 2cm;
+}
+.b{
+    border-style: ridge;
+}
+.containe{
+    width: 800px;
+    height: 500px;
+    position: fixed;
+}
+.rigth{
+    margin-left: 80px;
+}
+.left{
+    text-align: left;
+}
+table {
+    border: 1px solid black;
+  }
+  .align{
+    align-items: end;
+  }
