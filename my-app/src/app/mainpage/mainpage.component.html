@@ -14,7 +14,7 @@
                   <p style="text-align: right;"><label for="name" >ชื่อ</label></p>
                 </div>
                 <div class="col-sm-6">
-                  <input type="text" name="search" [(ngModel)]="searchBook" placeholder="search by name" >
+                  <input type="text" name="search" [(ngModel)]="searchname" placeholder="search by name" >
                 </div>
               </div>
               <div class="col-sm-6">
@@ -22,7 +22,7 @@
                   <p style="text-align: left;"><label for="type" >หมวดหมู่</label></p>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" name="seach" placeholder="search by type"  >
+                  <input type="text" name="seach" [(ngModel)]="searchtype" placeholder="search by type"  >
                 </div>
               </div>
             </div>
@@ -33,7 +33,7 @@
                   <p style="text-align: right;"><label for="namep" >ผู้แต่ง</label></p>
                 </div>
                 <div class="col-sm-6">
-                  <input type="text" name="namep" placeholder="search by writter" >
+                  <input type="text" name="namep" [(ngModel)]="searchnamep" placeholder="search by writter" >
                 </div>
               </div>
               <div class="col-sm-6">
@@ -41,7 +41,7 @@
                   <p style="text-align: left;"><label for="pice" >ราคา</label></p>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" name="pice" placeholder="search by pice">
+                  <input type="text" name="pice" [(ngModel)]="searchpice" placeholder="search by pice">
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@
                   <p style="text-align: right;"><label for="namey" >ผู้ยืม</label></p>
                 </div>
                 <div class="col-sm-6">
-                  <input type="text" name="namey" placeholder="search by borrower">
+                  <input type="text" name="namey" [(ngModel)]="searchnamey"  placeholder="search by borrower">
                 </div>
               </div>
               <div class="col-sm-6">
@@ -61,7 +61,7 @@
                   <p style="text-align: left;"><label for="date" >วันที่ยืม</label></p>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" name="date" placeholder="search by date">
+                  <input type="text" name="date" [(ngModel)]="searchdate"  placeholder="search by date">
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let book of books | filter:searchBook">
+              <tr *ngFor="let book of books | filter:searchname | filter:searchtype | filter:searchnamep | filter:searchpice | filter:searchnamey | filter:searchdate">
                   <td>{{book.name}}</td>
                   <td>{{book.type}}</td>
                   <td>{{book.namep}}</td>
